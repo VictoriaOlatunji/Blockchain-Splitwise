@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Blockchain Splitwise</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- <script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1/web3.min.js" 
+        integrity="sha512-5erpERW8MxcHDF7Xea9eBQPiRtxbse70pFcaHJuOhdEBQeAxGQjUwgJbuBDWve+xP/u5IoJbKjyJk50qCnMD7A==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer">
+</script> -->
+<script src="./web3.min.js"></script>
+<!-- <script src="bower_components/abi-decoder/dist/abi-decoder.js" type="application/json" ></script> -->
+<script src="./abi-decoder.js"></script>
+  </head>
+  <body>
+  	<h1>BLOCKCHAIN <br> SPLITWISE</h1>
+    <div class="panel panel_right">
+		<h2>Personal Account</h2>
+		<div id="personalaccount" class="account"></div>
+    <p>My Address: <span id="my_address" ></span></p>
+		<p>Total amount Owed: <span id="total_owed"></span></p>
+		<p>Last Activity: <span id="last_active"></span></p>
+	</div>
+	<div class="wallet_addresses_panel">
+		<h2>Wallet Addresses</h2>
+		<ol class="wallet_addresses"></ol>
+	</div>
+    <div class="main">
+      <h3>ADD IOU</h3>
+      <fieldset class="iou-data">
+        <legend>Creditor's address</legend>
+        <input type="text" placeholder="Enter the address of the person you owe" id="creditor"/>
+      </fieldset>
+      <fieldset class="iou-data">
+        <legend>Amount owed</legend>
+        <input type="text" placeholder="Enter the amount you owed them" id="amount"/>
+      </fieldset> 
+      <button type="button" id="addiou" onclick="{clicker()}">ADD IOU</button>
+      <h3>SPLITWISE USERS</h3>
+      <ul id="all_users"></ul>
+      <pre id="log"></pre>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
